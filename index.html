@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Deep Research Tools Comparison</title>
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1e40af;
+            --background-color: #f8fafc;
+            --text-color: #1e293b;
+            --border-color: #e2e8f0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+            background: white;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            padding: 1rem;
+            text-align: left;
+            border: 1px solid var(--border-color);
+        }
+
+        .comparison-table th {
+            background-color: var(--primary-color);
+            color: white;
+            font-weight: 600;
+        }
+
+        .comparison-table tr:nth-child(even) {
+            background-color: #f8fafc;
+        }
+
+        .comparison-table tr:hover {
+            background-color: #e2e8f0;
+        }
+
+        .conclusion {
+            background: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            margin-top: 3rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+        }
+
+        .conclusion h2 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .conclusion ul {
+            list-style-type: none;
+            padding-left: 1rem;
+        }
+
+        .conclusion li {
+            margin: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .conclusion li::before {
+            content: "•";
+            color: var(--primary-color);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        .note {
+            font-style: italic;
+            color: #64748b;
+            margin-top: 1rem;
+            padding: 1rem;
+            border-left: 4px solid var(--primary-color);
+            background-color: #f1f5f9;
+            border-radius: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            .comparison-table {
+                display: block;
+                overflow-x: auto;
+                white-space: nowrap;
+            }
+
+            header {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI Deep Research Tools 比較</h1>
+            <p>主要な5つのAI調査ツールの詳細な比較</p>
+        </header>
+
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>項目</th>
+                    <th>ChatGPT Deep Research</th>
+                    <th>Gemini Deep Research</th>
+                    <th>Perplexity Deep Research</th>
+                    <th>Felo Agent</th>
+                    <th>Grok DeepSearch</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>得意分野</strong></td>
+                    <td>高度な知識が必要な分野での専門的な知識収集・分析。金融、科学、法律など。プロのアナリストや研究者の下調べ。詳細なレポートと具体例。</td>
+                    <td>学術リサーチ支援、ビジネスインテリジェンス。市場調査や競合分析。Googleドキュメントでの出力。</td>
+                    <td>金融、マーケティング、技術分野。コンテンツ作成の下調べ。学生・一般ユーザーの学習支援。</td>
+                    <td>企業の市場分析、競合調査、新規事業のリサーチ。金融・投資分野。リサーチテンプレート。プレゼンテーションとマインドマップでの出力。検索をステップ分け。</td>
+                    <td>研究、ジャーナリズム。ウェブ上の情報収集と要約。マーケティング・ビジネス分析。Xのデータを含む検索。バランスの取れたレポート。</td>
+                </tr>
+                <tr>
+                    <td><strong>データ取得範囲</strong></td>
+                    <td>インターネット上の多数のウェブサイト・文書。画像・PDF含む多様な形式。</td>
+                    <td>Googleの検索技術と連携しウェブ全体。信頼性の高いサイト（学術機関や公式情報）。</td>
+                    <td>多数の検索クエリを自動実行。関連Webページを多数読み込む。画像・PDF含む多様な形式。</td>
+                    <td>多数の信頼できる情報源を横断検索。ニュース記事、ウェブサイト、学術ジャーナル。画像・PDF、ワード含む多様な形式。</td>
+                    <td>インターネット上の多数のウェブサイト・文書。Xの投稿を検索に含める。</td>
+                </tr>
+                <tr>
+                    <td><strong>処理時間</strong></td>
+                    <td>約5～30分</td>
+                    <td>約5～15分</td>
+                    <td>約2～4分</td>
+                    <td>約5分～10分</td>
+                    <td>約1分～4分</td>
+                </tr>
+                <tr>
+                    <td><strong>出力形式・引用</strong></td>
+                    <td>レポートとして表示、引用元URL明記。PDF出力可能（要設定）。ワードファイル作成可能（要設定）。</td>
+                    <td>Webインターフェースで提供、段落構造化、引用リンク付き。Googleドキュメントへエクスポート可能。PDF出力。</td>
+                    <td>サイト上で利用可能、出典リンク付与。PDFダウンロード、共有用リンク生成。</td>
+                    <td>ドキュメント形式で出力、番号付き引用。プレゼン用スライド(PPT)としてエクスポート。マインドマップでの出力。NotionやGoogleドライブに保存可能。</td>
+                    <td>レポート内で情報源明示、引用元URLや出典がリンクとして表示。共有用リンク生成。</td>
+                </tr>
+                <tr>
+                    <td><strong>料金体系</strong></td>
+                    <td>ChatGPT Proユーザー限定。月額$200、月100回まで。</td>
+                    <td>Gemini Advanced加入者向け。月額約$20。実行回数制限は非公開。</td>
+                    <td>無料ユーザーは1日5件まで。Proプランは月額$20、年間$200で1日最大500件。</td>
+                    <td>無料ユーザーは1日5件までプロ機能利用可能。Proプランは月額2,099円、1日300回まで。</td>
+                    <td>Xの「Premium+」プラン加入が必要、$40。SuperGrokプランは月額30ドル、年額300ドル。</td>
+                </tr>
+                <tr>
+                    <td><strong>その他</strong></td>
+                    <td>日本語フォント非対応（要設定）。出力文章量が多い。</td>
+                    <td>Webサイト参照数が多い。レポートは簡素。</td>
+                    <td>簡素な内容。一般論的な回答が多い。</td>
+                    <td>検索をステップで分割。ファン行動の分類分け。</td>
+                    <td>Xのデータ参照には明示的な指示が必要。</td>
+                </tr>
+                <tr>
+                    <td><strong>総合評価</strong></td>
+                    <td>最も良い。</td>
+                    <td>調査内容による。</td>
+                    <td>ちょっと劣る。</td>
+                    <td>Feloでも十分なケースが多い。無料でも使える。</td>
+                    <td>バランスが良い。</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="conclusion">
+            <h2>結論</h2>
+            <ul>
+                <li><strong>ChatGPT Deep Research</strong>: 最も優れているが、高価格。</li>
+                <li><strong>Felo Agent</strong>: ChatGPTに匹敵する性能で、無料でも利用可能。</li>
+                <li><strong>Grok DeepSearch</strong>: Xのデータ参照が強み。</li>
+                <li><strong>Gemini Deep Research</strong>: 調査内容によっては良い結果が得られる可能性あり。</li>
+                <li><strong>Perplexity Deep Research</strong>: 他のツールに比べて劣る。</li>
+            </ul>
+            <p class="note">※これらのツールは進化し続けているため、数ヶ月後には評価が変わる可能性があることに注意してください。</p>
+        </div>
+    </div>
+
+    <script>
+        // テーブルの行にホバーエフェクトを追加
+        document.querySelectorAll('.comparison-table tr').forEach(row => {
+            row.addEventListener('mouseover', () => {
+                row.style.backgroundColor = '#e2e8f0';
+            });
+            row.addEventListener('mouseout', () => {
+                row.style.backgroundColor = '';
+            });
+        });
+
+        // スムーズスクロール
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
